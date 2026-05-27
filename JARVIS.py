@@ -20,12 +20,12 @@ def jarvis():
 
     print("You: " + text)
 # Initialize the client with your API key
- client = genai.Client(api_key="YOUR_API_KEY")
+ client = genai.Client(api_key="AIzaSyDzcxrtXuLET0in-8Ud34YHnxO2LN7vufU")
 
 # Generate a response
  response = client.models.generate_content(
     model="gemini-2.5-flash", 
-    contents=[text, "Do not use ASCII characters in your response. Also reply in full text without special characters, numbers are allowed."]
+    contents=[text, "Do not use ASCII characters in your response. Also reply in full text without special characters, numbers are allowed. Make your response not more than a short paragraph unless I ask you to emphasize on it."]
 )
 
  print("AI: " + response.text)
