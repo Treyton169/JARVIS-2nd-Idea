@@ -9,7 +9,7 @@ r = sr.Recognizer()
 def jarvis():
 
  with sr.Microphone() as source:
-    print("Yes Sir, I am listening...")
+    print("AI: Yes Sir, I am listening...")
     r.adjust_for_ambient_noise(source)
     print("Listening...")
     
@@ -18,7 +18,7 @@ def jarvis():
     # 4. Convert to text
     text = r.recognize_google(audio)
 
-    print(text)
+    print("You: " + text)
 # Initialize the client with your API key
  client = genai.Client(api_key="YOUR_API_KEY")
 
@@ -28,7 +28,7 @@ def jarvis():
     contents=[text, "Do not use ASCII characters in your response. Also reply in full text without special characters, numbers are allowed."]
 )
 
- print(response.text)
+ print("AI: " + response.text)
 
  engine = pyttsx3.init()
  engine.say(response.text)
