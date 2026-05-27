@@ -20,7 +20,7 @@ def jarvis():
 
     print(text)
 # Initialize the client with your API key
- client = genai.Client(api_key="AIzaSyBjOHpvQLzg8M0EyiVGNVACzyPDQFFA6M4")
+ client = genai.Client(api_key="YOUR_API_KEY")
 
 # Generate a response
  response = client.models.generate_content(
